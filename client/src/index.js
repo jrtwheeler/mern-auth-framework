@@ -4,6 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { combineReducers } from "redux";
+import authReducer from "./authReducer";
+import errorReducer from "./errorReducer";
+
+export default combineReducers({
+  auth: authReducer,
+  errors: errorReducer
+});
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
